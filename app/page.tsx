@@ -12,13 +12,23 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="bg-black text-zinc-100">
+      <main className="min-h-screen bg-black text-zinc-100">
         <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
+        <div id="about">
+          <About />
+        </div>
+        <div id="experience">
+          <Experience />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
       </main>
     </>
   );
