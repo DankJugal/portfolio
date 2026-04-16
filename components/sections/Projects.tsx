@@ -51,46 +51,64 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-24 px-4 md:px-8 bg-black border-t border-zinc-900">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-sm text-zinc-500 uppercase tracking-wider font-mono mb-12">Projects</h2>
+    <section id="projects" className="py-24 px-4 md:px-8 bg-black border-t border-zinc-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-16">
+          <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">Portfolio</p>
+          <h2 className="text-4xl md:text-5xl font-light text-zinc-100">Notable Projects</h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group border border-zinc-900 hover:border-zinc-800 bg-zinc-950 hover:bg-zinc-900/50 rounded-lg overflow-hidden transition-all duration-300"
+              className="group flex flex-col border border-zinc-900 hover:border-zinc-700 bg-zinc-950 hover:bg-zinc-900/50 rounded-lg overflow-hidden transition-all duration-300"
             >
-              <div className="aspect-video bg-gradient-to-br from-zinc-900 to-zinc-950 border-b border-zinc-900 relative overflow-hidden">
+              <div className="relative aspect-video bg-gradient-to-br from-zinc-900 to-black overflow-hidden border-b border-zinc-900 group-hover:border-zinc-800 transition-colors">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 border border-zinc-800 rounded-lg group-hover:scale-110 transition-transform duration-500" />
+                  <div className="relative w-full h-full">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `
+                        linear-gradient(45deg, transparent 48%, rgba(255,255,255,.05) 49%, rgba(255,255,255,.05) 51%, transparent 52%),
+                        linear-gradient(-45deg, transparent 48%, rgba(255,255,255,.05) 49%, rgba(255,255,255,.05) 51%, transparent 52%)
+                      `,
+                      backgroundSize: '16px 16px',
+                      backgroundPosition: '0 0'
+                    }} />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center space-y-2">
+                        <div className="w-24 h-24 border border-zinc-800 rounded-lg group-hover:border-zinc-600 group-hover:scale-105 transition-all duration-300 flex items-center justify-center bg-black/50">
+                          <span className="text-xs text-zinc-600 font-mono">Image</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-zinc-800/20 to-transparent" />
               </div>
 
-              <div className="p-6 space-y-4">
+              <div className="flex-1 p-6 flex flex-col space-y-4">
                 <div>
-                  <h3 className="text-lg font-semibold text-zinc-100 mb-1">{project.title}</h3>
-                  <p className="text-xs text-zinc-500 font-mono">{project.subtitle}</p>
+                  <h3 className="text-lg md:text-xl font-semibold text-zinc-100 mb-2">{project.title}</h3>
+                  <p className="text-xs text-zinc-600 font-mono uppercase tracking-wider">{project.subtitle}</p>
                 </div>
 
-                <p className="text-sm text-zinc-400 leading-relaxed">{project.description}</p>
+                <p className="text-sm text-zinc-400 leading-relaxed flex-1">{project.description}</p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 pt-2">
                   {project.tech.map((tech, i) => (
-                    <span key={i} className="text-xs px-2 py-1 bg-black border border-zinc-800 rounded text-zinc-500 font-mono">
+                    <span key={i} className="text-xs px-3 py-1 bg-black border border-zinc-800 text-zinc-400 font-mono hover:text-zinc-200 hover:border-zinc-700 transition-colors">
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="pt-2 flex items-center justify-between">
+                <div className="pt-2 flex items-center justify-between border-t border-zinc-900">
                   <span className="text-xs text-zinc-600 font-mono">{project.stats}</span>
                   <a
                     href={project.link}
                     className="text-xs text-zinc-500 hover:text-zinc-300 font-mono transition-colors"
                   >
-                    View Project →
+                    Learn More →
                   </a>
                 </div>
               </div>

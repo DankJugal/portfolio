@@ -27,32 +27,35 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-24 px-4 md:px-8 bg-zinc-950 border-t border-zinc-900">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-sm text-zinc-500 uppercase tracking-wider font-mono mb-12">Experience</h2>
+    <section id="experience" className="py-24 px-4 md:px-8 bg-black border-t border-zinc-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-16">
+          <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">Career Path</p>
+          <h2 className="text-4xl md:text-5xl font-light text-zinc-100">Experience</h2>
+        </div>
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="border-l-2 border-zinc-800 pl-6 pb-8 relative">
-              <div className="absolute w-2 h-2 bg-zinc-700 rounded-full -left-[5px] top-1.5" />
+            <div key={index} className="border-l border-zinc-800 pl-8 pb-8 relative group">
+              <div className="absolute w-3 h-3 bg-zinc-700 rounded-full -left-1.5 top-2 group-hover:bg-zinc-400 transition-colors" />
 
-              <div className="space-y-3">
-                <div>
-                  <h3 className="text-lg font-semibold text-zinc-100">{exp.title}</h3>
-                  <p className="text-sm text-zinc-400">{exp.company}</p>
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <h3 className="text-xl md:text-2xl font-light text-zinc-100">{exp.title}</h3>
+                  <p className="text-base text-zinc-400">{exp.company}</p>
                 </div>
 
-                <div className="flex flex-wrap gap-3 text-xs text-zinc-500 font-mono">
+                <div className="flex flex-wrap gap-4 text-sm text-zinc-500 font-mono">
                   <span>{exp.period}</span>
-                  <span>•</span>
+                  <span className="hidden sm:inline">•</span>
                   <span>{exp.location}</span>
                 </div>
 
-                <p className="text-sm text-zinc-400 leading-relaxed">{exp.description}</p>
+                <p className="text-base text-zinc-400 leading-relaxed max-w-3xl">{exp.description}</p>
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   {exp.tags.map((tag, i) => (
-                    <span key={i} className="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-500 font-mono">
+                    <span key={i} className="text-xs px-3 py-1 bg-black border border-zinc-800 text-zinc-400 font-mono hover:border-zinc-700 hover:text-zinc-300 transition-colors">
                       {tag}
                     </span>
                   ))}
