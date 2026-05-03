@@ -1,11 +1,11 @@
 const experiences = [
   {
     title: 'Summer Intern',
-    company: 'SRIP IIT Gandhinagar',
+    company: 'SRIP IIT Gandhinagar (with IIT Bombay Nanofabrication Facility)',
     location: 'Gandhinagar, India',
     period: 'May 2025 – July 2025',
-    description: 'Developed AtmoSync (Wi-Fi environmental monitor) and HubVolt (USB hub power controller) using microcontrollers and sensors, Node.js backend, MySQL, and PHP dashboard for remote monitoring and control.',
-    tags: ['ESP32', 'Node.js', 'MySQL', 'PHP', 'IoT']
+    description: "Worked under Prof. Rajat Moona (Director, IIT Gandhinagar; former Director General of C-DAC) and Prof. Dinesh Sharma (IIT Bombay; key contributor to India's M3 EVM and VVPAT design used in national elections), with day-to-day guidance from Mr. Rajni Moona. Built two production hardware systems deployed across IIT campuses — AtmoSync, a Wi-Fi environmental monitor using ESP32 and SHT31 with a Node.js + MySQL backend (5+ units at IIT Bombay, 95+ in progress at IIT Gandhinagar), and HubVolt, a remote-controlled USB hub power manager with port-level Wi-Fi control (20+ units installed at IIT Bombay Nanofabrication Facility).",
+    tags: ['ESP32', 'Node.js', 'MySQL', 'PHP', 'IoT', 'C++']
   },
   {
     title: 'Frontend Developer',

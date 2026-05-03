@@ -45,14 +45,6 @@ export default function Navigation() {
               </a>
             ))}
           </div>
-
-          <a
-            href="/JugalPatel_Resume.pdf"
-            download
-            className="text-xs font-mono text-zinc-400 hover:text-zinc-100 transition-colors"
-          >
-            Resume
-          </a>
         </div>
       </div>
     </nav>

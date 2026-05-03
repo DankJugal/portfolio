@@ -12,19 +12,7 @@ const achievements = [
     detail: 'Among 1500+ competing teams nationwide',
     link: null,
     highlight: false,
-  },
-  {
-    label: 'FreeCodeCamp Certifications',
-    detail: 'Backend Development & Data Science',
-    link: null,
-    highlight: false,
-  },
-  {
-    label: 'JEE Mains 2022',
-    detail: 'AIR 12,909 | GUJCET 2022: 99.40 percentile',
-    link: null,
-    highlight: false,
-  },
+  }
 ];
 
 const scholarships = [
@@ -54,13 +42,6 @@ export default function Contact() {
                 >
                   <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   <span className="font-light">jugalp6103@gmail.com</span>
-                </a>
-                <a
-                  href="tel:+918866172036"
-                  className="flex items-center gap-4 text-base text-zinc-400 hover:text-zinc-100 transition-colors group"
-                >
-                  <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span className="font-light">+91-8866172036</span>
                 </a>
               </div>
             </div>
@@ -141,12 +122,6 @@ export default function Contact() {
               </ul>
             </div>
           </div>
-        </div>
-
-        <div className="mt-16 pt-8 border-t border-zinc-900 text-center">
-          <p className="text-xs text-zinc-600 font-mono">
-            © 2025 Jugal Patel. Built with Next.js and Tailwind CSS.
-          </p>
         </div>
       </div>
     </section>

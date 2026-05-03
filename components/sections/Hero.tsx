@@ -16,7 +16,9 @@ export default function Hero() {
               Jugal Patel
             </h1>
             <p className="text-base md:text-lg text-zinc-400 mb-8 leading-relaxed max-w-lg">
-              Computer Science student at IIIT Surat specializing in full-stack development, IoT systems, and machine learning applications.
+              Final-year Computer Science student at IIIT Surat.
+GSoC 2026 contributor at Debian. I build across the stack —
+embedded systems, full-stack web, and open source infrastructure.
             </p>
 
             <div className="flex flex-wrap gap-6 mb-8">
@@ -28,7 +30,7 @@ export default function Hero() {
                 <span className="font-mono">Email</span>
               </a>
               <a
-                href="https://github.com/jugalp6103"
+                href="https://github.com/DankJugal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
@@ -54,13 +56,7 @@ export default function Hero() {
               >
                 View Work
               </a>
-              <a
-                href="/JugalPatel_Resume.pdf"
-                download
-                className="px-6 py-3 bg-zinc-100 text-black text-sm font-mono hover:bg-zinc-200 transition-colors"
-              >
-                Download Resume
-              </a>
+            
             </div>
           </div>
 
@@ -98,7 +94,7 @@ export default function Hero() {
 
               <div className="absolute inset-0 rounded-xl overflow-hidden">
                 <Image
-                  src="/Gemini_Generated_Image_9qbkcl9qbkcl9qbk_(1).png"
+                  src="/Gemini_Generated_Image_9qbkcl9qbkcl9qbk (1).png"
                   alt="Jugal Patel"
                   fill
                   className="object-cover object-center"
