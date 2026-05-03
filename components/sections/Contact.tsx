@@ -59,7 +59,7 @@ export default function Contact() {
                   <span className="font-light">GitHub Profile</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/jugalpatel"
+                  href="https://www.linkedin.com/in/jugalpatel6103/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-base text-zinc-400 hover:text-zinc-100 transition-colors group"

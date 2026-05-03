@@ -39,7 +39,7 @@ embedded systems, full-stack web, and open source infrastructure.
                 <span className="font-mono">GitHub</span>
               </a>
               <a
-                href="https://linkedin.com/in/jugalpatel"
+                href="https://www.linkedin.com/in/jugalpatel6103/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
