@@ -1,10 +1,37 @@
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 
 const achievements = [
-  'Top 50 among 1500 teams at ODOO Hackathon 2025',
-  'FreeCodeCamp Backend Development and Data Science certifications',
-  'MYSY Fellowship recipient, Government of Gujarat',
-  'GUJCET 2022: 99.40 percentile | JEE Mains 2022: AIR 12,909'
+  {
+    label: 'Google Summer of Code 2026',
+    detail: 'Selected contributor — open source project under Google',
+    link: 'https://summerofcode.withgoogle.com/programs/2026/projects/Qx3OtgKl',
+    highlight: true,
+  },
+  {
+    label: 'Top 50 at ODOO Hackathon 2025',
+    detail: 'Among 1500+ competing teams nationwide',
+    link: null,
+    highlight: false,
+  },
+  {
+    label: 'FreeCodeCamp Certifications',
+    detail: 'Backend Development & Data Science',
+    link: null,
+    highlight: false,
+  },
+  {
+    label: 'JEE Mains 2022',
+    detail: 'AIR 12,909 | GUJCET 2022: 99.40 percentile',
+    link: null,
+    highlight: false,
+  },
+];
+
+const scholarships = [
+  {
+    label: 'MYSY Fellowship',
+    detail: 'Merit-cum-Means Scholarship, Government of Gujarat',
+  },
 ];
 
 export default function Contact() {
@@ -63,16 +90,56 @@ export default function Contact() {
             </div>
           </div>
 
-          <div>
-            <p className="text-xs text-zinc-600 uppercase tracking-wider font-mono mb-6">Key Achievements</p>
-            <ul className="space-y-4">
-              {achievements.map((achievement, index) => (
-                <li key={index} className="text-base text-zinc-400 leading-relaxed flex gap-4 group">
-                  <span className="text-zinc-800 group-hover:text-zinc-600 transition-colors mt-1.5 min-w-fit">→</span>
-                  <span className="font-light">{achievement}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-12">
+            <div>
+              <p className="text-xs text-zinc-600 uppercase tracking-wider font-mono mb-6">Achievements</p>
+              <ul className="space-y-4">
+                {achievements.map((item, index) => (
+                  <li key={index} className="group">
+                    {item.highlight ? (
+                      <a
+                        href={item.link!}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex gap-4 items-start border border-zinc-800 hover:border-zinc-600 bg-zinc-950 hover:bg-zinc-900/60 rounded-lg p-4 transition-all duration-200"
+                      >
+                        <div className="mt-0.5 min-w-fit">
+                          <div className="w-2 h-2 rounded-full bg-zinc-400 group-hover:bg-zinc-200 transition-colors" />
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-sm text-zinc-200 font-medium leading-snug">{item.label}</p>
+                          <p className="text-xs text-zinc-500 font-light">{item.detail}</p>
+                          <p className="text-xs text-zinc-600 font-mono mt-1">View Project →</p>
+                        </div>
+                      </a>
+                    ) : (
+                      <div className="flex gap-4 items-start group">
+                        <span className="text-zinc-800 group-hover:text-zinc-600 transition-colors mt-1.5 min-w-fit">→</span>
+                        <div className="space-y-0.5">
+                          <p className="text-sm text-zinc-300 font-light leading-snug">{item.label}</p>
+                          <p className="text-xs text-zinc-600 font-light">{item.detail}</p>
+                        </div>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-xs text-zinc-600 uppercase tracking-wider font-mono mb-6">Scholarships</p>
+              <ul className="space-y-4">
+                {scholarships.map((item, index) => (
+                  <li key={index} className="flex gap-4 items-start group">
+                    <span className="text-zinc-800 group-hover:text-zinc-600 transition-colors mt-1.5 min-w-fit">→</span>
+                    <div className="space-y-0.5">
+                      <p className="text-sm text-zinc-300 font-light leading-snug">{item.label}</p>
+                      <p className="text-xs text-zinc-600 font-light">{item.detail}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
