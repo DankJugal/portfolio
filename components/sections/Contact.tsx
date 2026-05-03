@@ -50,7 +50,7 @@ export default function Contact() {
               <p className="text-xs text-zinc-600 uppercase tracking-wider font-mono">Social Links</p>
               <div className="space-y-3">
                 <a
-                  href="https://github.com/jugalp6103"
+                  href="https://github.com/DankJugal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-base text-zinc-400 hover:text-zinc-100 transition-colors group"
